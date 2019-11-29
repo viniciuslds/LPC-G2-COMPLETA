@@ -1,0 +1,16 @@
+{% extends 'app_blog/base.html' %}
+
+{% block conteudo %}
+    <div class="card mt-5 mb-5 center" style="width: 30rem; " >
+        <div class="card-body">
+
+            <h1> Faça seu login</h1>
+            <form action="." method="post">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <a href="detalhe"><button type="submit" class="btn btn-primary">login</button></a>
+
+            </form>
+        </div>
+    </div>
+{% endblock %}
