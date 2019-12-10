@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Solicitações</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+       <form method="post">
+              <div class="container mt-5 mb-5">
+                     <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                   {% if user.is_authenticated %}
+                                          <form method="post">
+                                          {% csrf_token %}
+                                                        {{ form }}
+                                          <br>
+                                                 <button type="submit" class="btn btn-primary">Solicitar</button>
+                                   {% endif %}
+       </form>
+</body>
+</html>

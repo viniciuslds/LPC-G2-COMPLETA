@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Minha Solicitação</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    {% if soli.atendida %}
+        <font color="red"><h2>Solicitação atendida</h2></font>
+        <font color="red"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solicitacao de {{ soli.solicitante }}</h3></font>
+        <font color="red"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origem: {{ soli.origem }}</p></font>
+        <font color="red"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Destino: {{ soli.destino }}</p></font>
+        <font color="red"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantidade de pessoas que vão no carro: {{ soli.qtdPessoas }}</p></font>
+        <font color="red"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data da viagem: {{ soli.data }}</p></font>
+    {% else %}
+        <h2>Solicitação para atender</h2>
+        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solicitacao de {{ soli.solicitante }}</h3>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origem: {{ soli.origem }}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Destino: {{ soli.destino }}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantidade de pessoas que vão no carro: {{ soli.qtdPessoas }}</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Data da viagem: {{ soli.data }}</p>
+    {% endif %}   
+</body>
+</html>

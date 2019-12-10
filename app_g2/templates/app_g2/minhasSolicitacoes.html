@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Minhas Solicitações</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="header clearfix  col-md-5 offset-md-3">
+        <nav >
+            <ul class="nav nav-pills float-right">
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary mr-sm-2" href="/logout">Sair</a>
+                </li>
+            </ul>
+        </nav>
+        <h1>Solicitações</h1>
+        <a href="/solicitar"><button type="submit" class="btn btn-primary">Solicitar uma nova viagem?</button></a>
+    </div>
+    {% for soli in solicitacoes %}
+        <div class="Solicitacao">
+            <h2><a href="/solicita/{{ soli.pk }}"> Solicitação de {{ soli.solicitante }}</a></h2>
+        </div>
+    {% endfor %}
+</body>
+</html>
